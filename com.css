@@ -21,6 +21,26 @@ disp{
 	border-radius:5px;
 	background-color:lightgray
 }
+disp:before{
+	color:red
+}
+disp[warn]:before{
+	content:"Warning: "
+}
+disp[alert]:before{
+	content:"Alert: "
+}
+abbr{
+	text-decoration:none;
+	display:inline-block;
+	padding:0 3px;
+	border-radius:5px;
+	background-color:lightblue;
+	font-size:smaller
+}
+abbr:after{
+	content:" "url(img/info.svg)
+}
 STC:before{
 	content:"Subject to Change:\A";
 	white-space:pre;
@@ -106,5 +126,5 @@ dropdown>drop>dropdown{
 }
 dropdown>drop{
 	display:block;
-	max-height:35px
+	height:35px
 }
