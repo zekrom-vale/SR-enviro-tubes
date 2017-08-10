@@ -1,39 +1,161 @@
-<p>Safety Requirements</p>
-<ul>
-   <li>
-      Breach Action Unit
-      <ul>
-         <li>Detect</li>
-         <li>Analyze</li>
-         <li>Act</li>
-      </ul>
-   </li>
-</ul>
-<ul>
-   <li>
-      Every section will have bulkhead doors on their ends
-      <ul>
-         <li>On closing: warn personnel with lights and nose</li>
-      </ul>
-   </li>
-</ul>
-<ul>
-   <li>
-      Emergency backup battery and generator
-      <ul>
-         <li>On low battery: close bulkheads</li>
-      </ul>
-   </li>
-</ul>
-<p>Conduits</p>
-<ul>
-   <li class="opt">Water*</li>
-   <li class="opt">Gas*</li>
-   <li class="bak">Power</li>
-   <li class="bak">
-      Network
-      <ul>
-         <li>On discontinuity: Que for repair and inspection</li>
-      </ul>
-   </li>
-</ul>
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>
+		Short Range Environmental Tubes(SRET)
+	</title>
+	<link rel="stylesheet" href="com.css"/>
+</head>
+<body>
+	<header>
+		<nav>
+			<a>
+				Home
+			</a>
+			<drop>
+				<a>Buildings</a>
+				<dropdown>
+					<a>LIP</a>
+					<a>LPPU</a>
+					<drop>
+						<a>More</a>
+						<dropdown>
+							<a>A</a>
+							<a>B</a>
+							<a>C</a>
+							<a>D</a>
+						</dropdown>
+					</drop>
+					<drop>
+						<a>Next</a>
+						<dropdown>
+						<drop>
+							<a>Next</a>
+							<dropdown>
+								<a>A</a>
+								<a>B</a>
+								<a>C</a>
+								<a>D</a>
+							</dropdown>
+						</drop>
+							<a>B</a>
+							<a>C</a>
+							<a>D</a>
+						</dropdown>
+					</drop>
+				</dropdown>
+			</drop>
+		</nav>
+	</header>
+	<description>
+		A pressurized trapezoid prism with 3 sections.  
+		The center section is designed for pedestrian use and may be fitted with conveyors.  
+		<STC>
+			The side sections are depressurised and will pressurize on maintenance.  
+			This will help prevent combustion.  
+			It will be required to have a maintenance switch to prevent accidental depressurization.  
+			Along with emergency pressurization buttons.
+		</STC>
+		<div>
+			If the unit is breached, the 
+				<attr title="Breach Action Unit">BAU</attr>
+				will close off the section after warning personnel.
+			If damage is likely to cause a breach or fire the 
+				<attr title="Breach Action Unit">BAU</attr>
+				will instruct personnel to evacuate, close the bulkheads, and display <disp>DAMAGED UNIT</disp>.
+		</div>
+		
+	</description>
+	<text center="! child">
+		<h1 center>Text images</h1>
+		<pre>
+   _________   
+  /|       |\  
+ /o|       |o\ 
+/oo|_______|oo\
+  ^-Conduit-^
+		</pre>
+		<pre>
+___________________
+|                 |
+| <- Bulkheads -> |
+|_________________|
+		</pre>
+		<pre>
+___________________
+|     conduit     |
+|_________________|
+|                 |
+|    pedestrian   |
+|_________________|
+|     conduit     |
+|_________________|
+		</pre>
+	</text>
+	<h2>Safety Instruments</h2>
+	<ul>
+		<li>
+			Breach Action Unit
+			<ul>
+				<li>Detect</li>
+				<li>Analyze</li>
+				<li>
+					Act
+					<ul>
+						<li>Close all doors.  If a door is damaged, precede to the next.</li>
+						<li>All doors that are closed will be closed shut and display <disp>DEPRESSURISED</disp></li>
+					</ul>
+				</li>
+			</ul>
+		</li>
+		<li>
+			Emergency Wireless Com
+			<ul>
+				<li>
+					Sends data if ethernet is unavailable
+				</li>
+			</ul>
+		</li>
+	</ul>
+	<ul>
+		<li>
+			Every section will have bulkhead doors on their ends
+			<ul>
+				<li>On closing: warn personnel with lights and nose</li>
+			</ul>
+		</li>
+	</ul>
+	<ul>
+		<li>
+			Emergency backup battery and generator
+			<ul>
+				<li>On low battery: close bulkheads</li>
+			</ul>
+		</li>
+	</ul>
+	<h2>Conduits</h2>
+	<ul>
+		<li class="opt">Water</li>
+		<li class="opt">Gas</li>
+		<li class="bak">Power</li>
+		<li class="bak">Ventilation</li>
+		<li class="bak">
+			Network
+			<ul>
+				<li>On discontinuity: Que for repair and inspection</li>
+			</ul>
+		</li>
+	</ul>
+	<h2>Insulation</h2>
+	<div>
+		<h3>Case Near or At Zero Atmosphere:</h3>
+		<p>
+			The bottom will be the most insulated as heat can only transfer through radiation without contact.
+		</p>
+		<h3>Case Atmosphere:</h3>
+		<p>
+			Insulation would be required on all sides.
+		</p>
+	</div>
+</body>
+</html>

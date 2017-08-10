@@ -1,0 +1,110 @@
+[before]:before{
+	content:attr(before)
+}
+[after]:after{
+	content:attr(after)
+}
+[WS]:after,[WS]::after,
+[WS]:before,[WS]::before,
+[WS="this"]{
+	white-space:attr(WS)
+}
+[center]:not([center~="!"]),
+[center~="child"]>*,
+[center~="all"] *{
+	margin:auto;
+	text-align:center
+}
+disp{
+	display:inline-block;
+	padding:0 3px;
+	border-radius:5px;
+	background-color:lightgray
+}
+STC:before{
+	content:"Subject to Change:\A";
+	white-space:pre;
+	color:red
+}
+STC{
+	display:block;
+	border-left:solid red 6px;
+	padding:6px;
+	margin:5px 15px;
+	margin-left:10px;
+	background-color:lightgray
+}
+description{
+	display:block;
+	border:solid #f2f2f2 5px;
+	border-radius:20px;
+	padding:20px;
+	background-color:#e6e6e6
+}
+li.opt::after{
+	content:" :optional";
+	color:red
+}
+li.bak::after{
+	content:" :backed up";
+	color:red
+}
+/*NAV*/
+nav{
+	padding-bottom:10px
+}
+nav a{
+	text-decoration:none
+}
+nav>a,
+:not(dropdown)>drop{
+	margin:0 5px
+}
+nav>a,
+:not(dropdown)>drop>a{
+	cursor:pointer;
+	font-size:30px;
+	padding:0 16px;
+	border:none;
+	background-color:cyan;
+	color:white
+}
+nav>a:hover,
+drop>a:hover{
+	background-color:red;
+}
+nav drop:hover>dropdown{
+	display:block
+}
+:not(dropdown)>drop{
+	position:relative;
+    display:inline-block
+}
+dropdown{
+	display:none;
+    position:absolute;
+    background-color:#f9f9f9;
+    box-shadow:0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index:1;
+	min-width:160px
+}
+dropdown>a,
+dropdown>drop>a{
+	cursor:pointer;
+	font-size:30px;
+	color:black;
+	display:block
+}
+dropdown a:hover{
+	background-color:cyan;
+	color:white
+}
+dropdown>drop>dropdown{
+	position:relative;
+	left:100%;
+	top:-35px
+}
+dropdown>drop{
+	display:block;
+	max-height:35px
+}
